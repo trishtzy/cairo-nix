@@ -358,6 +358,21 @@ let
         cargoLock = null;
       };
     }
+    {
+      toolchainVersion = "2.8.2";
+      cairo = {
+        version = "2.8.2";
+        srcHash = "sha256-vBdIGkdQa/csqsu4DbgIYitVbDLDUAFmIUytZ7IcxNk=";
+        archiveHash = "sha256-2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        cargoHash = "sha256-w3kzEM34HYQ6KgILaDpmZbCgAh8Ql24DRe12woUAhVI=";
+      };
+      scarb = {
+        version = "2.8.2";
+        srcHash = "sha256-4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+        cargoHash = "sha256-5BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=";
+        cargoLock = null;
+      };
+    }
   ];
 
   toolchains =
@@ -365,7 +380,7 @@ let
 in
 {
   cairo-bin = (toolchains // {
-    stable = toolchains."2.6.3-1";
-    beta = toolchains."2.6.3-1";
+    stable = toolchains."2.8.2";
+    beta = toolchains."2.8.2";
   });
 }
